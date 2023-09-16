@@ -1,49 +1,205 @@
+/* ESTILOS DEL BODY */
+
 body{
-    background-color: black;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  text-align: justify
 }
 
-#intro{
-    background-image: url(../image/header.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 70vh;
-}
-
-#pageHeader{
-    display: grid;
-    width: 100%;
-}
-
-#pageHeader h1, #pageHeader h2{
-    grid-column: 2 / 2;
-}
-#pageHeader h1{
-    font-size: 40px;
-}
+/* ESTILOS DEL CONTENEDOR */
 
 #container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 3fr;
-    grid-template-rows: auto;
+  display: flex;
+  flex-direction: column
 }
 
-#intro {
-    grid-column: 1 / span 3;
+/* ESTILOS DE LA PRIMERA SECCION "INTRO" */
+
+#container #intro{
+  height: 70vh;
+  width: 100%;
+  display: grid;
+  grid-column: 1 / span 3;
+  background-image: url(../image/header.jpg);
+  background-size: contain;
+  background-repeat: no-repeat
 }
 
-#supportingText {
-    grid-column: 1 / span 2 ;
-    grid-row: 2;
-    margin-right: 40px;
-
+#container #intro #pageHeader{
+  width: 100%;
+  grid-column: 5 / 5;
+  margin-top: 50px
 }
 
-#linkList { 
-    grid-column: 3;
-    grid-row: 2;
-    margin-top: 60px;
-    margin-left: 50px;
-    
+#container #intro #pageHeader h1{
+  font-weight: 400;
+  font-size: 50px
+}
+
+/* ESTILOS DE LA SEGUNDA SECCION "CONTAINTER-2" */
+
+#container #container-2{
+  display: flex;
+  flex-direction: row
+}
+
+/* ESTILOS DE LA SECCION IZQUIERDA DEL SEGUNDO CONTENEDOR */
+
+#container #container-2 #supportingText {
+  width: 70%;
+  padding-right: 80px;
+  margin-left: 30px;
+  padding-top: 50px
+}
+
+/* ESTILOS DE LA SECCION DERECHA DEL SEGUNDO CONTENEDOR */
+
+#container #container-2 #linkList { 
+  width: 20%;
+  margin-top: 60px;
+  margin-right: 50px
+}
+
+#container #container-2 #supportingText h3,#container #container-2 #linkList h3{
+  color:gray;
+  font-size: 25px
+}
+
+#container #container-2 #linkList{
+  margin-top: 100px
+}
+
+#container #container-2 #linkList h3.archives{
+  margin-bottom: 40px
+}
+
+/* ESLILOS DE LAS LISTAS */
+
+#container #container-2 #linkList ul li{
+  list-style:inside;
+  margin: 20px 0
+}
+
+#container #container-2 #linkList ul a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  width: 100%
+}
+
+#container #container-2 #linkList ul span{
+  display: inline-block;
+  width: 90%;
+  border-bottom: 3px white dashed
+}
+
+#container #container-2 #linkList #larchives ul li{
+  list-style:inside;
+  margin: 0
+}
+
+/* RESPONSIVE TABLET */
+
+@media (min-width:1024px){
+
+  /* ESTILOS DE LA PRIMERA SECCION */
+  
+  #container #intro{
+    height: 25vh
+  }
+
+  /* ESTILOS DE LA SEGUNDA SECCION */
+
+  #container #container-2{
+    flex-direction: column-reverse
+  }
+
+  /* ESTILOS DE LA SECCION DE ARRIBA DEL SEGUNDO CONTENEDOR */
+
+  #container #container-2 #linkList2{
+    display: flex;
+    width: 100%;
+    margin-top: 100px
+  }
+
+  #container #container-2 #linkList2 #lselect, #container #container-2 #linkList2 #lselect #larchives{
+    width: 50%
+  }
+
+  #container #container-2 #linkList { 
+    width: 100%;
+    margin-top: 100px;
+    margin: 0 30px
+  }
+
+  /* ESTILOS DE LA SECCION DE ABAJO DEL SEGUNDO CONTENEDOR */
+
+  #container #container-2 #supportingText {
+    width: 100%;
+    margin: 0 30px
+  }
+}
+
+/* RESPONSIVE MOBILE */
+
+@media (min-width:685px){
+
+  /* ESTILOS DE LA PRIMERA SECCION */
+  
+  #container #intro{
+    height: 20vh
+  }
+
+  /* ESTILOS DE LA SEGUNDA SECCION */
+
+  #container #container-2{
+    flex-direction: column-reverse
+  }
+
+  #container #container-2 #supportingText h3, #container #container-2 #linkList h3 {
+    font-size: 75px;
+    text-align: left
+  }
+
+  /* ESTILOS DE LA SECCION DE ARRIBA DEL SEGUNDO CONTENEDOR */
+
+  #container #container-2 #linkList2{
+    display: flex;
+    margin-top: 50px
+  }
+
+  #container #container-2 #linkList2 #lselect, #container #container-2 #linkList2 #lselect #larchives{
+    width: 50%
+  }
+
+  #container #container-2 #linkList ul a {
+    font-size: 50px;
+    width: 100%
+  }
+
+  #container #container-2 #linkList { 
+    width: 100%;
+    margin-top: 100px;
+    margin: 0 30px
+  }
+
+  #container #container-2 #linkList h3.archives{
+    margin: 0
+  }
+
+  #container #container-2 #linkList ul span {
+    width: 75%
+  }
+
+  #container #container-2 #linkList ul li{
+    font-size: 50px
+  }
+
+  /* ESTILOS DE LA SECCION DE ABAJO DEL SEGUNDO CONTENEDOR */
+
+  #container #container-2 #supportingText {
+    width: 100%;
+    margin: 0 30px
+  }
 }
