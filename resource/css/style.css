@@ -43,5 +43,7 @@ body{
 #linkList { 
     grid-column: 3;
     grid-row: 2;
+    margin-top: 60px;
+    margin-left: 50px;
     
 }
