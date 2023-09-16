@@ -22,3 +22,26 @@ body{
 #pageHeader h1{
     font-size: 40px;
 }
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: auto;
+}
+
+#intro {
+    grid-column: 1 / span 3;
+}
+
+#supportingText {
+    grid-column: 1 / span 2 ;
+    grid-row: 2;
+    margin-right: 40px;
+
+}
+
+#linkList { 
+    grid-column: 3;
+    grid-row: 2;
+    
+}
